@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Box, Button, Container, Item, List, Span, Title } from "./style";
 
 export default function HomePage() {
