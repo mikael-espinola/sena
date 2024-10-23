@@ -1,1 +1,1 @@
-web: python3 src/app/backend/api/sort_number.py
+web: gunicorn src.app.backend.api.sort_number.py
