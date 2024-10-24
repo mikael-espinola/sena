@@ -84,7 +84,7 @@ const rotate = keyframes`
 `;
 
 export const Icon = styled(LuLoader2)`
-  animation: ${rotate} 2s linear infinite; // 2s é o tempo da animação, pode ser ajustado
+  animation: ${rotate} 2s linear infinite;
   font-size: 40px;
   color: white;
 `;
