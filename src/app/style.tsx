@@ -1,4 +1,6 @@
-import styled from "styled-components";
+"use client";
+import { LuLoader2 } from "react-icons/lu";
+import styled, { keyframes } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -63,10 +65,26 @@ export const Item = styled.li`
   font-size: 22px;
 
   @media (min-width: 768px) {
-    font-size: 30px;
+    font-size: 40px;
   }
 `;
 
 export const Span = styled.span`
   text-decoration: underline;
+  color: white;
+`;
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const Icon = styled(LuLoader2)`
+  animation: ${rotate} 2s linear infinite; // 2s é o tempo da animação, pode ser ajustado
+  font-size: 40px;
+  color: white;
 `;
