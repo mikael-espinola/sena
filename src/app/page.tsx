@@ -8,7 +8,7 @@ export default function HomePage() {
   const [sortedNumbers, setSortedNumbers] = useState<number[]>([]);
 
   const getNumbers = () => {
-    fetch(`${apiUrl}/sort-number`)
+    fetch(`${apiUrl}`)
       .then((response) => response.json())
       .then((data) => {
         setSortedNumbers(data);
