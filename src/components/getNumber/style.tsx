@@ -61,3 +61,38 @@ export const Icon = styled(LuLoader2)`
   font-size: 60px;
   color: white;
 `;
+
+export const BoxResults = styled.div`
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+`;
+
+export const SpanRresult = styled.span`
+  display: flex;
+  gap: 1rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 1rem;
+
+  h3 {
+    border: 1px solid white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+  }
+`;
+
+export const ListResult = styled.ul`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+`;
+export const Result = styled.li`
+  display: flex;
+  color: white;
+`;

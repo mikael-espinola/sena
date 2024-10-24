@@ -1,10 +1,25 @@
 "use client";
 import React, { useState } from "react";
-import { Button, Icon, Item, List, Span } from "./style";
+import {
+  BoxResults,
+  Button,
+  Icon,
+  Item,
+  List,
+  ListResult,
+  Result,
+  Span,
+  SpanRresult,
+} from "./style";
+
+interface TArr {
+  numberList: number[];
+}
 
 const GetNumber = () => {
   const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   const [sortedNumbers, setSortedNumbers] = useState<number[]>([]);
+  const [numbersList, setNumbersList] = useState<number[][]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const getNumbers = () => {
@@ -13,6 +28,7 @@ const GetNumber = () => {
       .then((response) => response.json())
       .then((data) => {
         setSortedNumbers(data);
+        setNumbersList((prev) => [...prev, data]);
       })
       .finally(() => {
         setIsLoading(false);
@@ -34,6 +50,18 @@ const GetNumber = () => {
           ))
         )}
       </List>
+      <BoxResults>
+        {numbersList.map((arr, index) => (
+          <SpanRresult key={index}>
+            <h3>{index + 1}</h3>
+            <ListResult>
+              {arr.map((num, indexNum) => (
+                <Result key={indexNum}>{num}</Result>
+              ))}
+            </ListResult>
+          </SpanRresult>
+        ))}
+      </BoxResults>
     </>
   );
 };
