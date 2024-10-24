@@ -5,7 +5,7 @@ Este projeto é um gerador de números para o jogo da Mega-Sena, utilizando Next
 ## Tecnologias Utilizadas
 
 - **Front-end**: Next.js
-- **Back-end**: Flask (Python) [Repositório aqui](https://github.com/mikael-espinola/api-number/blob/main/main.py)
+- **Back-end**: Flask (Python) [Repositório aqui](https://github.com/mikael-espinola/api-number)
 - **Estilização**: Styled-Components
 - **Gerenciamento de estado**: React Hooks
 - **APIs**: Fetch API para comunicação entre front-end e back-end
